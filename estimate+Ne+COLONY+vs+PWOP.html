@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
 <title>estimate Ne COLONY vs PWOP</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="estimate+Ne+COLONY+vs+PWOP_files/require.js"></script>
+<script src="estimate+Ne+COLONY+vs+PWOP_files/jquery.js"></script>
 
 <style type="text/css">
     /*!
@@ -11718,13 +11718,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="estimate+Ne+COLONY+vs+PWOP_files/custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="estimate+Ne+COLONY+vs+PWOP_files/MathJax.js"></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config;executed=true">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -11741,8 +11741,125 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
-<body>
+    <!-- End of mathjax configuration --><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 0; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -11751,7 +11868,18 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Supplementary-material-for:">Supplementary material for:<a class="anchor-link" href="#Supplementary-material-for:">&#182;</a></h1><h3 id="Effective-number-of-breeders-from-sibship-reconstruction:-empirical-evaluations-using-hatchery-steelhead">Effective number of breeders from sibship reconstruction: empirical evaluations using hatchery steelhead<a class="anchor-link" href="#Effective-number-of-breeders-from-sibship-reconstruction:-empirical-evaluations-using-hatchery-steelhead">&#182;</a></h3>
+<h1 id="Supplementary-material-for:">Supplementary material for:<a class="anchor-link" href="#Supplementary-material-for:">¶</a></h1><h3 id="Effective-number-of-breeders-from-sibship-reconstruction:-empirical-evaluations-using-hatchery-steelhead">Effective number of breeders from sibship reconstruction: empirical evaluations using hatchery steelhead<a class="anchor-link" href="#Effective-number-of-breeders-from-sibship-reconstruction:-empirical-evaluations-using-hatchery-steelhead">¶</a></h3><p>This supplementary notebook was written by Ryan Waples (ryan.waples@gmail.com)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This document originated as a <a href="http://jupyter.org/">Jupyter</a> notebook running Python 2.7.</p>
+
 </div>
 </div>
 </div>
@@ -11776,11 +11904,12 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Parentage-analysis-without-parents-(PWOP)">Parentage analysis without parents (PWOP)<a class="anchor-link" href="#Parentage-analysis-without-parents-(PWOP)">&#182;</a></h2><p>Waples et. al. (2011) equation 2a, also Supplemental equation 2 in the current manuscipt.</p>
+<h2 id="Parentage-analysis-without-parents-(PWOP)">Parentage analysis without parents (PWOP)<a class="anchor-link" href="#Parentage-analysis-without-parents-%28PWOP%29">¶</a></h2><p>Waples et. al. (2011) equation 2a, also Supplemental equation 2 in the current manuscipt.</p>
 <p>Produces an Ne estimate from a vector of k_i values using the equation:</p>
-\begin{equation}
+<span style="color: inherit;" class="MathJax_Preview"></span><div style="text-align: center;" class="MathJax_Display"><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;msubsup&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-1-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 8.375em; display: inline-block;" role="math" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 6.331em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(0.884em, 1006.33em, 4.539em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span id="MathJax-Span-3" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-4" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-5" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-6" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-7" class="mfrac"><span style="display: inline-block; position: relative; width: 3.682em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.081em, 1003.4em, 4.428em, -1000em); top: -4.741em; left: 50%; margin-left: -1.751em;"><span id="MathJax-Span-8" class="mrow"><span id="MathJax-Span-9" class="munderover"><span style="display: inline-block; position: relative; width: 0.914em; height: 0px;"><span style="position: absolute; clip: rect(3.081em, 1000.86em, 4.428em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; vertical-align: -0.002em;" id="MathJax-Span-10" class="mo">∑</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="padding-left: 0.188em;" id="MathJax-Span-11" class="msubsup"><span style="display: inline-block; position: relative; width: 0.716em; height: 0px;"><span style="position: absolute; clip: rect(3.159em, 1000.46em, 4.178em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-12" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.017em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.444em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-13" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-14" class="mo">−</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-15" class="mn">1</span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(2.618em, 1003.46em, 4.801em, -1000em); top: -2.805em; left: 50%; margin-left: -1.781em;"><span id="MathJax-Span-16" class="mrow"><span id="MathJax-Span-17" class="mfrac"><span style="display: inline-block; position: relative; width: 1.637em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.214em, 1001.52em, 4.351em, -1000em); top: -4.6em; left: 50%; margin-left: -0.758em;"><span id="MathJax-Span-18" class="mrow"><span id="MathJax-Span-19" class="munderover"><span style="display: inline-block; position: relative; width: 0.646em; height: 0px;"><span style="position: absolute; clip: rect(3.304em, 1000.6em, 4.351em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; vertical-align: -0.002em;" id="MathJax-Span-20" class="mo">∑</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="padding-left: 0.188em;" id="MathJax-Span-21" class="msubsup"><span style="display: inline-block; position: relative; width: 0.683em; height: 0px;"><span style="position: absolute; clip: rect(3.359em, 1000.33em, 4.174em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-22" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.012em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.504em, 1000.3em, 4.167em, -1000em); top: -4.294em; left: 0.38em;"><span style="font-size: 50%; font-family: STIXGeneral;" id="MathJax-Span-23" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.515em, 1000.19em, 4.172em, -1000em); top: -3.83em; left: 0.314em;"><span style="font-size: 50%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-24" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.304em, 1001.34em, 4.351em, -1000em); top: -3.555em; left: 50%; margin-left: -0.67em;"><span id="MathJax-Span-25" class="mrow"><span id="MathJax-Span-26" class="munderover"><span style="display: inline-block; position: relative; width: 0.646em; height: 0px;"><span style="position: absolute; clip: rect(3.304em, 1000.6em, 4.351em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; vertical-align: -0.002em;" id="MathJax-Span-27" class="mo">∑</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="padding-left: 0.188em;" id="MathJax-Span-28" class="msubsup"><span style="display: inline-block; position: relative; width: 0.506em; height: 0px;"><span style="position: absolute; clip: rect(3.359em, 1000.33em, 4.174em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-29" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.012em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.898em; left: 0.314em;"><span style="font-size: 50%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-30" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.64em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.637em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-31" class="mo">−</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-32" class="mn">1</span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1003.68em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 3.682em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -2.491em; border-left: 0px solid; width: 0px; height: 4.539em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML MJX_Assistive_MathML_Block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>N</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"></mrow><mrow class="MJX-TeXAtom-ORD"></mrow></munderover><msub><mi>k</mi><mi>i</mi></msub><mo>−</mo><mn>1</mn></mrow><mrow><mfrac><mrow><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"></mrow><mrow class="MJX-TeXAtom-ORD"></mrow></munderover><msubsup><mi>k</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mrow><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"></mrow><mrow class="MJX-TeXAtom-ORD"></mrow></munderover><msub><mi>k</mi><mi>i</mi></msub></mrow></mfrac><mo>−</mo><mn>1</mn></mrow></mfrac></math></span></span></div><script id="MathJax-Element-1" type="math/tex; mode=display">\begin{equation}
  N_e = \frac{\sum_{}^{} k_i - 1}{\frac{\sum_{}^{} k_i^2}{\sum_{}^{} k_i} -1 } 
-\end{equation}
+\end{equation}</script><p>Where k_i is the number of offspring produced by parent i.</p>
+
 </div>
 </div>
 </div>
@@ -11791,8 +11920,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">pwop</span><span class="p">(</span><span class="n">k_i</span><span class="p">):</span>
     <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">k_i</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
-    <span class="k">print</span> <span class="s1">&#39;{} contributing parents&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
-    <span class="k">print</span> <span class="s1">&#39;{} gametes&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s1">'{} contributing parents'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s1">'{} gametes'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
     <span class="n">numerator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="n">Ne</span> <span class="o">=</span> <span class="n">numerator</span><span class="o">/</span><span class="n">denominator</span> 
@@ -11809,7 +11938,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="example">example<a class="anchor-link" href="#example">&#182;</a></h4>
+<h4 id="example">example<a class="anchor-link" href="#example">¶</a></h4>
 </div>
 </div>
 </div>
@@ -11818,9 +11947,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># K_i is an array giving the number of offspring produced by each parent.</span>
-<span class="n">K_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The PWOP Ne estimate is: {:1.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pwop</span><span class="p">(</span><span class="n">K_i</span><span class="p">)))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">'The PWOP Ne estimate is: {:1.3f}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pwop</span><span class="p">(</span><span class="n">K_i</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -11849,10 +11977,11 @@ The PWOP Ne estimate is: 6.243
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="p_same">p_same<a class="anchor-link" href="#p_same">&#182;</a></h2><p>calculates the probability that two gametes sampled at random from a k<em>i vector share the same parent. N is the number of parents.
+<h2 id="p_same">p_same<a class="anchor-link" href="#p_same">¶</a></h2><p>calculates the probability that two gametes sampled at random from a k<em>i vector share the same parent. 
 \begin{equation}
 p</em>{same} = \frac{1}{N(N-1)} \sum_{i=1}^{N} (k_i(k_i-1))
 \end{equation}</p>
+<p>Where N is the number of parent (or offspring) gametes.</p>
 
 </div>
 </div>
@@ -11863,10 +11992,10 @@ p</em>{same} = \frac{1}{N(N-1)} \sum_{i=1}^{N} (k_i(k_i-1))
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">p_same</span><span class="p">(</span><span class="n">k_i</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;chance that two random gametes present in the offspring generation are from the same parent&quot;&quot;&quot;</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span> <span class="c1"># number of offspring or parents</span>
-    <span class="k">print</span> <span class="s1">&#39;{} contributing parents&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
-    <span class="k">print</span> <span class="s1">&#39;{} gametes&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="sd">"""chance that two random gametes present in the offspring generation are from the same parent"""</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span> <span class="c1"># 2x number of offspring or parents</span>
+    <span class="k">print</span> <span class="s1">'{} contributing parents'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s1">'{} gametes'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="o">*</span><span class="p">(</span><span class="n">k_i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
@@ -11876,23 +12005,60 @@ p</em>{same} = \frac{1}{N(N-1)} \sum_{i=1}^{N} (k_i(k_i-1))
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="example">example<a class="anchor-link" href="#example">&#182;</a></h4>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">p_same</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 contributing parents
+4 gametes
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="example">example<a class="anchor-link" href="#example">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># use the same k_i vector</span>
 <span class="k">print</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The chance two gametes share a parent: {:1.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">'The chance two gametes share a parent: {:1.3f}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -11922,10 +12088,16 @@ The chance two gametes share a parent: 0.160
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="COLONY">COLONY<a class="anchor-link" href="#COLONY">&#182;</a></h2><p>"Equations for the effective size ($N_e$) of a population were derived in terms of the frequencies of a pair of offspring taken at random from the population being sibs sharing the same one or two parents" Wang (2009) eq. 10:</p>
-\begin{equation}
+<h2 id="COLONY-method-of-Ne-estimation.">COLONY method of Ne estimation.<a class="anchor-link" href="#COLONY-method-of-Ne-estimation.">¶</a></h2><p>Wang (2009): "Equations for the effective size (<span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-2-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.446em; display: inline-block;" role="math" id="MathJax-Span-33" class="math"><span style="display: inline-block; position: relative; width: 1.082em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.457em, 1001.08em, 2.593em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-34" class="mrow"><span id="MathJax-Span-35" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-36" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-37" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.28em; border-left: 0px solid; width: 0px; height: 1.213em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>e</mi></msub></math></span></span><script id="MathJax-Element-2" type="math/tex">N_e</script>)
+ of a population were derived in terms of the frequencies of a pair of 
+offspring taken at random from the population being sibs sharing the 
+same one or two parents"</p>
+<p>Wang (2009) eq. 10:</p>
+<span style="color: inherit;" class="MathJax_Preview"></span><div style="text-align: center;" class="MathJax_Display"><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mi&gt;&amp;#x03B1;&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;&amp;#x03B1;&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-3-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 26.018em; display: inline-block;" role="math" id="MathJax-Span-38" class="math"><span style="display: inline-block; position: relative; width: 19.697em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.028em, 1019.65em, 3.549em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-39" class="mrow"><span id="MathJax-Span-40" class="mfrac"><span style="display: inline-block; position: relative; width: 1.176em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-41" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.06em, 4.324em, -1000em); top: -3.318em; left: 50%; margin-left: -0.528em;"><span id="MathJax-Span-42" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-43" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-44" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.18em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.176em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-45" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-46" class="mfrac"><span style="display: inline-block; position: relative; width: 2.857em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1002.73em, 4.208em, -1000em); top: -4.681em; left: 50%; margin-left: -1.369em;"><span id="MathJax-Span-47" class="mrow"><span style="font-family: STIXGeneral;" id="MathJax-Span-48" class="mn">1</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-49" class="mo">+</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-50" class="mn">3</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-51" class="mi">α</span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.166em, 1000.47em, 4.167em, -1000em); top: -3.318em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-52" class="mn">4</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1002.86em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.857em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-53" class="mo">(</span><span id="MathJax-Span-54" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-55" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-56" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-57" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-58" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-59" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-60" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-61" class="mo">+</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-62" class="mn">2</span><span id="MathJax-Span-63" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-64" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-65" class="mn">3</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-66" class="mo">)</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-67" class="mo">−</span><span style="padding-left: 0.25em;" id="MathJax-Span-68" class="mfrac"><span style="display: inline-block; position: relative; width: 0.672em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.401em, 1000.55em, 4.178em, -1000em); top: -4.681em; left: 50%; margin-left: -0.276em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-69" class="mi">α</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.166em, 1000.47em, 4.167em, -1000em); top: -3.318em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-70" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1000.67em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.672em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-71" class="mo">(</span><span id="MathJax-Span-72" class="mfrac"><span style="display: inline-block; position: relative; width: 1.216em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-73" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.1em, 4.317em, -1000em); top: -3.318em; left: 50%; margin-left: -0.548em;"><span id="MathJax-Span-74" class="msubsup"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-75" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-76" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.22em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.216em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-77" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-78" class="mfrac"><span style="display: inline-block; position: relative; width: 1.216em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-79" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.1em, 4.317em, -1000em); top: -3.318em; left: 50%; margin-left: -0.548em;"><span id="MathJax-Span-80" class="msubsup"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-81" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-82" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.22em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.216em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-83" class="mo">)</span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.185em; border-left: 0px solid; width: 0px; height: 3.042em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML MJX_Assistive_MathML_Block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mn>1</mn><msub><mi>N</mi><mi>e</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mi>α</mi></mrow><mn>4</mn></mfrac><mo stretchy="false">(</mo><msub><mi>Q</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Q</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><msub><mi>Q</mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>−</mo><mfrac><mi>α</mi><mn>2</mn></mfrac><mo stretchy="false">(</mo><mfrac><mn>1</mn><msub><mi>N</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><mn>1</mn><msub><mi>N</mi><mn>2</mn></msub></mfrac><mo stretchy="false">)</mo></math></span></span></div><script id="MathJax-Element-3" type="math/tex; mode=display">\begin{equation}
 \frac{1}{N_e} = \frac{1+3\alpha}{4}(Q_1+Q_2+2Q_3)-\frac{\alpha}{2}(\frac{1}{N_1}+\frac{1}{N_2})
-\end{equation}<p>Where $\alpha$ is a measure of departure from Hardy-Weinberg equilibrium, $Q_1$, $Q_2$, and $Q_3$ are the probabilities of a pair of offspring being paternal half-siblings, maternal half-siblings, and full-siblings, respectively. $N_1$ and $N_2$ are the number of male and female parents.</p>
+\end{equation}</script><p>Where <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03B1;&lt;/mi&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-4-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 0.732em; display: inline-block;" role="math" id="MathJax-Span-84" class="math"><span style="display: inline-block; position: relative; width: 0.541em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.94em, 1000.54em, 2.717em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-85" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-86" class="mi">α</span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.086em; border-left: 0px solid; width: 0px; height: 0.739em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math></span></span><script id="MathJax-Element-4" type="math/tex">\alpha</script> is a measure of departure from Hardy-Weinberg equilibrium, <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-5-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.518em; display: inline-block;" role="math" id="MathJax-Span-87" class="math"><span style="display: inline-block; position: relative; width: 1.136em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.444em, 1001.14em, 2.617em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-88" class="mrow"><span id="MathJax-Span-89" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-90" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-91" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.312em; border-left: 0px solid; width: 0px; height: 1.262em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mn>1</mn></msub></math></span></span><script id="MathJax-Element-5" type="math/tex">Q_1</script>, <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-6-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.518em; display: inline-block;" role="math" id="MathJax-Span-92" class="math"><span style="display: inline-block; position: relative; width: 1.136em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.444em, 1001.14em, 2.617em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-93" class="mrow"><span id="MathJax-Span-94" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-95" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-96" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.312em; border-left: 0px solid; width: 0px; height: 1.262em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mn>2</mn></msub></math></span></span><script id="MathJax-Element-6" type="math/tex">Q_2</script>, and <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-7-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.518em; display: inline-block;" role="math" id="MathJax-Span-97" class="math"><span style="display: inline-block; position: relative; width: 1.136em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.444em, 1001.14em, 2.617em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-98" class="mrow"><span id="MathJax-Span-99" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-100" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-101" class="mn">3</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.312em; border-left: 0px solid; width: 0px; height: 1.262em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mn>3</mn></msub></math></span></span><script id="MathJax-Element-7" type="math/tex">Q_3</script>
+ are the probabilities of a pair of offspring being paternal 
+half-siblings, maternal half-siblings, and full-siblings, respectively. <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-8-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.446em; display: inline-block;" role="math" id="MathJax-Span-102" class="math"><span style="display: inline-block; position: relative; width: 1.082em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.457em, 1001.08em, 2.585em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-103" class="mrow"><span id="MathJax-Span-104" class="msubsup"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-105" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-106" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.269em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mn>1</mn></msub></math></span></span><script id="MathJax-Element-8" type="math/tex">N_1</script> and <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-9-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 1.446em; display: inline-block;" role="math" id="MathJax-Span-107" class="math"><span style="display: inline-block; position: relative; width: 1.082em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.457em, 1001.08em, 2.585em, -1000em); top: -2.273em; left: 0em;"><span id="MathJax-Span-108" class="mrow"><span id="MathJax-Span-109" class="msubsup"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-110" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-111" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.273em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.269em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mn>2</mn></msub></math></span></span><script id="MathJax-Element-9" type="math/tex">N_2</script> are the number of male and female parents.</p>
 
 </div>
 </div>
@@ -11935,10 +12107,10 @@ The chance two gametes share a parent: 0.160
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If we assume alpha = 0 (i.e. complete HWE). The equation simplifies to:</p>
-\begin{equation}
+<p>We will assume alpha = 0 (i.e. complete HWE). The equation simplifies to:</p>
+<span style="color: inherit;" class="MathJax_Preview"></span><div style="text-align: center;" class="MathJax_Display"><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-10-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 14.018em; display: inline-block;" role="math" id="MathJax-Span-112" class="math"><span style="display: inline-block; position: relative; width: 10.606em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.028em, 1010.56em, 3.549em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-113" class="mrow"><span id="MathJax-Span-114" class="mfrac"><span style="display: inline-block; position: relative; width: 1.176em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-115" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.06em, 4.324em, -1000em); top: -3.318em; left: 50%; margin-left: -0.528em;"><span id="MathJax-Span-116" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-117" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-118" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.18em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.176em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-119" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-120" class="mfrac"><span style="display: inline-block; position: relative; width: 0.62em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-121" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.166em, 1000.47em, 4.167em, -1000em); top: -3.318em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-122" class="mn">4</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1000.62em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.62em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-123" class="mo">(</span><span id="MathJax-Span-124" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-125" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-126" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-127" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-128" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-129" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-130" class="mn">2</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-131" class="mo">+</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-132" class="mn">2</span><span id="MathJax-Span-133" class="msubsup"><span style="display: inline-block; position: relative; width: 1.151em; height: 0px;"><span style="position: absolute; clip: rect(3.176em, 1000.7em, 4.349em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-134" class="mi">Q</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.722em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-135" class="mn">3</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral;" id="MathJax-Span-136" class="mo">)</span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.185em; border-left: 0px solid; width: 0px; height: 3.042em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML MJX_Assistive_MathML_Block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mn>1</mn><msub><mi>N</mi><mi>e</mi></msub></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="false">(</mo><msub><mi>Q</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Q</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><msub><mi>Q</mi><mn>3</mn></msub><mo stretchy="false">)</mo></math></span></span></div><script id="MathJax-Element-10" type="math/tex; mode=display">\begin{equation}
 \frac{1}{N_e} = \frac{1}{4}(Q_1+Q_2+2Q_3)
-\end{equation}
+\end{equation}</script>
 </div>
 </div>
 </div>
@@ -11947,10 +12119,10 @@ The chance two gametes share a parent: 0.160
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(Q1+Q2+2<em>Q3)/2 is eqivalent to p_same (Wang 2009, equation 8), so we can again simplify to:
-\begin{equation}
-\frac{1}{N_e} = \frac{1}{2} </em> p_{same}
-\end{equation}</p>
+<p>(Q1+Q2+2*Q3)/4 is eqivalent to p_same (Wang 2009, equation 8), so we simplify to:
+<span style="color: inherit;" class="MathJax_Preview"></span><div style="text-align: center;" class="MathJax_Display"><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-11-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 6.946em; display: inline-block;" role="math" id="MathJax-Span-137" class="math"><span style="display: inline-block; position: relative; width: 5.249em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.028em, 1005.22em, 3.549em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-138" class="mrow"><span id="MathJax-Span-139" class="mfrac"><span style="display: inline-block; position: relative; width: 1.176em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-140" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.06em, 4.324em, -1000em); top: -3.318em; left: 50%; margin-left: -0.528em;"><span id="MathJax-Span-141" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-142" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-143" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.18em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.176em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-144" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-145" class="msubsup"><span style="display: inline-block; position: relative; width: 0.854em; height: 0px;"><span style="position: absolute; clip: rect(3.401em, 1000.47em, 4.372em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-146" class="mi">p</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.504em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-147" class="mi">s</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-148" class="mi">a</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-149" class="mi">m</span><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-150" class="mi">e</span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.185em; border-left: 0px solid; width: 0px; height: 3.042em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML MJX_Assistive_MathML_Block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mn>1</mn><msub><mi>N</mi><mi>e</mi></msub></mfrac><mo>=</mo><msub><mi>p</mi><mi>s</mi></msub><mi>a</mi><mi>m</mi><mi>e</mi></math></span></span></div><script id="MathJax-Element-11" type="math/tex; mode=display">\begin{equation}
+\frac{1}{N_e} = p_same
+\end{equation}</script></p>
 
 </div>
 </div>
@@ -11960,40 +12132,21 @@ The chance two gametes share a parent: 0.160
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The chance two gametes that share a parent are identical by decent is 0.5, so we again simplyfy to:</p>
-\begin{equation}
-\frac{1}{N_e} = p(IBD)
-\end{equation}
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is essentially the definition of inbreeding Ne.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>But notice the impact of the simplifications, we lose all consideration of separate sexes and assuming alpha = 0, may not be reasonable, hat Wang (2009) states that α = 1/(1 − 2Ne) in a randomly mating population.</p>
+<p>But notice the impact of the simplifications, we lose all 
+consideration of separate sexes and assuming alpha = 0, may not be 
+reasonable, especially for small populations.  In a ideal population it 
+should be on the order of <span style="color: inherit;" class="MathJax_Preview"></span><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03B1;&lt;/mi&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-12-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 0.732em; display: inline-block;" role="math" id="MathJax-Span-151" class="math"><span style="display: inline-block; position: relative; width: 0.541em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(1.94em, 1000.54em, 2.717em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-152" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-153" class="mi">α</span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.086em; border-left: 0px solid; width: 0px; height: 0.739em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math></span></span><script id="MathJax-Element-12" type="math/tex">\alpha</script> = 1/(1 − 2Ne) (Wang 2009, Crow &amp; Kimura 1970).</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">COLONY</span><span class="p">(</span><span class="n">p_same_parent</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Given the chance that two random gametes share a parent, return the Ne&quot;&quot;&quot;</span>
+    <span class="sd">"""Given the chance that two random gametes share a parent, return the Ne"""</span>
     <span class="n">Ne</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">p_same_parent</span>
     <span class="k">return</span><span class="p">(</span><span class="n">Ne</span><span class="p">)</span>
 </pre></div>
@@ -12005,10 +12158,10 @@ The chance two gametes share a parent: 0.160
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The COLONY Ne estimate is: {:1.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">COLONY</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">))))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">'The COLONY Ne estimate is: {:1.3f}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">COLONY</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">))))</span>
 </pre></div>
 
 </div>
@@ -12037,24 +12190,27 @@ The COLONY Ne estimate is: 6.243
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Simulate-an-ideal-mating-population">Simulate an ideal mating population<a class="anchor-link" href="#Simulate-an-ideal-mating-population">&#182;</a></h2><p>Generates a K_i vector from one generation of random mating of N parents producing N offspring (total of 2N gametes). The result excludes parents that do not contribute offspring.</p>
+<h2 id="Simulate-an-ideal-mating-population">Simulate an ideal mating population<a class="anchor-link" href="#Simulate-an-ideal-mating-population">¶</a></h2><p>Generates
+ a K_i vector from one generation of random mating of N parents 
+producing N offspring (total of 2N gametes). The result excludes parents
+ that do not contribute offspring.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">sim_ideal</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Generates a K_i vector from one generation of random mating of N parents&quot;&quot;&quot;</span>
+    <span class="sd">"""Generates a K_i vector from one generation of random mating of N parents"""</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">N</span><span class="p">):</span> <span class="c1"># For each of 2N gametes select a parent</span>
         <span class="n">a</span><span class="p">[</span><span class="n">xx</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span> <span class="c1"># assign the gamete to that parent</span>
     <span class="n">k_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-    <span class="k">print</span> <span class="s1">&#39;{} contributing parents&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
-    <span class="k">print</span> <span class="s1">&#39;{} gametes&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s1">'{} contributing parents'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s1">'{} gametes'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">k_i</span><span class="p">))</span>
     <span class="k">return</span><span class="p">(</span><span class="n">k_i</span><span class="p">)</span>
 </pre></div>
 
@@ -12065,7 +12221,7 @@ The COLONY Ne estimate is: 6.243
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">K_i</span> <span class="o">=</span> <span class="n">sim_ideal</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -12084,11 +12240,11 @@ The COLONY Ne estimate is: 6.243
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>176 contributing parents
 400 gametes
-[1 1 1 1 2 6 1 2 3 2 2 6 1 3 1 3 2 2 2 1 2 2 6 2 1 3 3 4 1 1 1 4 4 1 2 2 4
- 3 1 3 5 2 1 3 1 1 1 1 1 4 2 1 2 3 2 2 4 1 3 2 1 1 2 3 1 2 1 3 7 4 3 1 8 2
- 2 3 1 2 2 2 6 4 3 1 2 3 3 2 5 4 4 3 1 1 2 1 1 1 3 1 1 1 3 2 1 3 3 1 1 2 3
- 3 1 2 3 1 3 4 2 1 3 2 3 1 3 3 1 1 1 2 3 2 3 2 1 2 3 3 5 3 1 1 3 2 3 1 1 3
- 4 2 1 2 1 2 5 2 2 2 3 2 4 1 4 1 1 2 2 3 2 3 1 1 1 2 3 1]
+[5 3 2 3 3 1 2 2 6 3 1 2 2 3 1 1 2 1 2 2 4 1 5 2 2 3 1 3 4 2 1 2 5 1 2 2 3
+ 1 2 3 1 3 2 1 2 2 3 1 3 2 4 2 2 1 1 1 1 1 2 1 2 1 1 2 4 2 2 3 1 4 3 1 2 1
+ 1 8 1 4 4 2 2 2 1 4 3 1 1 3 2 2 3 2 4 3 1 2 4 3 4 1 3 3 1 1 3 5 4 1 3 1 1
+ 2 3 5 3 2 3 1 5 1 3 1 2 2 1 4 5 3 1 2 4 1 1 1 4 3 1 1 1 2 3 3 1 1 1 3 1 4
+ 3 3 1 3 1 2 3 2 1 1 4 3 2 1 1 4 4 2 2 1 2 4 1 1 2 3 1 2]
 </pre>
 </div>
 </div>
@@ -12102,53 +12258,16 @@ The COLONY Ne estimate is: 6.243
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Apply-both-methods-to-the-simulated-k_i-vector">Apply both methods to the simulated k_i vector<a class="anchor-link" href="#Apply-both-methods-to-the-simulated-k_i-vector">&#182;</a></h2>
+<h2 id="Apply-both-methods-to-the-simulated-k_i-vector">Apply both methods to the simulated k_i vector<a class="anchor-link" href="#Apply-both-methods-to-the-simulated-k_i-vector">¶</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>176 contributing parents
-400 gametes
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.005112781954887218</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pwop</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12171,7 +12290,7 @@ The COLONY Ne estimate is: 6.243
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>195.58823529411765</pre>
+<pre>0.004949874686716792</pre>
 </div>
 
 </div>
@@ -12185,7 +12304,7 @@ The COLONY Ne estimate is: 6.243
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">COLONY</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pwop</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12208,7 +12327,44 @@ The COLONY Ne estimate is: 6.243
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>195.58823529411765</pre>
+<pre>202.02531645569618</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">COLONY</span><span class="p">(</span><span class="n">p_same</span><span class="p">(</span><span class="n">K_i</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>176 contributing parents
+400 gametes
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>202.0253164556962</pre>
 </div>
 
 </div>
@@ -12222,16 +12378,16 @@ The COLONY Ne estimate is: 6.243
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Also-compare-to-Crow-(1954)-&amp;-Crow-and-Denniston-(1988)-eq-1:">Also compare to Crow (1954) &amp; Crow and Denniston (1988) eq 1:<a class="anchor-link" href="#Also-compare-to-Crow-(1954)-&amp;-Crow-and-Denniston-(1988)-eq-1:">&#182;</a></h2>\begin{equation}
+<h2 id="Also-compare-to-Crow-(1954)-&amp;-Crow-and-Denniston-(1988)-eq-1:">Also compare to Crow (1954) &amp; Crow and Denniston (1988) eq 1:<a class="anchor-link" href="#Also-compare-to-Crow-%281954%29-&amp;-Crow-and-Denniston-%281988%29-eq-1:">¶</a></h2><span style="color: inherit;" class="MathJax_Preview"></span><div style="text-align: center;" class="MathJax_Display"><span role="presentation" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msub&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mover&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x00AF;&lt;/mo&gt;&lt;/mover&gt;&lt;/mrow&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mover&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x00AF;&lt;/mo&gt;&lt;/mover&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mover&gt;&lt;msub&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x00AF;&lt;/mo&gt;&lt;/mover&gt;&lt;/mrow&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" style="position: relative;" tabindex="0" id="MathJax-Element-13-Frame" class="MathJax"><nobr aria-hidden="true"><span style="width: 12.089em; display: inline-block;" role="math" id="MathJax-Span-154" class="math"><span style="display: inline-block; position: relative; width: 9.145em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(0.207em, 1009.15em, 3.711em, -1000em); top: -2.543em; left: 0em;"><span id="MathJax-Span-155" class="mrow"><span id="MathJax-Span-156" class="mfrac"><span style="display: inline-block; position: relative; width: 1.176em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.166em, 1000.39em, 4.167em, -1000em); top: -4.681em; left: 50%; margin-left: -0.25em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-157" class="mn">1</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.189em, 1001.06em, 4.324em, -1000em); top: -3.318em; left: 50%; margin-left: -0.528em;"><span id="MathJax-Span-158" class="msubsup"><span style="display: inline-block; position: relative; width: 1.056em; height: 0px;"><span style="position: absolute; clip: rect(3.189em, 1000.73em, 4.182em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-159" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.667em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-160" class="mi">e</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1001.18em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.176em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.313em;" id="MathJax-Span-161" class="mo">=</span><span style="padding-left: 0.313em;" id="MathJax-Span-162" class="mfrac"><span style="display: inline-block; position: relative; width: 6.175em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(2.822em, 1006.05em, 4.846em, -1000em); top: -5.159em; left: 50%; margin-left: -3.027em;"><span id="MathJax-Span-163" class="mrow"><span id="MathJax-Span-164" class="texatom"><span id="MathJax-Span-165" class="mrow"><span id="MathJax-Span-166" class="munderover"><span style="display: inline-block; position: relative; width: 0.716em; height: 0px;"><span style="position: absolute; clip: rect(3.159em, 1000.72em, 4.324em, -1000em); top: -4.004em; left: 0em;"><span id="MathJax-Span-167" class="msubsup"><span style="display: inline-block; position: relative; width: 0.716em; height: 0px;"><span style="position: absolute; clip: rect(3.159em, 1000.46em, 4.178em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-168" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.017em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.444em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-169" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.241em, 1000.32em, 3.62em, -1000em); top: -4.276em; left: 0.191em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-170" class="mo">¯</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-171" class="mo">−</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-172" class="mn">1</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-173" class="mo">+</span><span style="padding-left: 0.25em;" id="MathJax-Span-174" class="mfrac"><span style="display: inline-block; position: relative; width: 2.229em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.359em, 1002.08em, 4.292em, -1000em); top: -4.541em; left: 50%; margin-left: -1.054em;"><span id="MathJax-Span-175" class="mrow"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-176" class="mi">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.054em;"></span></span><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-177" class="mi">a</span><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-178" class="mi">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.016em;"></span></span><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-179" class="mo">(</span><span id="MathJax-Span-180" class="msubsup"><span style="display: inline-block; position: relative; width: 0.506em; height: 0px;"><span style="position: absolute; clip: rect(3.359em, 1000.33em, 4.174em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-181" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.012em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.898em; left: 0.314em;"><span style="font-size: 50%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-182" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-183" class="mo">)</span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.186em, 1000.51em, 4.278em, -1000em); top: -3.436em; left: 50%; margin-left: -0.253em;"><span id="MathJax-Span-184" class="texatom"><span id="MathJax-Span-185" class="mrow"><span id="MathJax-Span-186" class="munderover"><span style="display: inline-block; position: relative; width: 0.506em; height: 0px;"><span style="position: absolute; clip: rect(3.359em, 1000.51em, 4.278em, -1000em); top: -4.004em; left: 0em;"><span id="MathJax-Span-187" class="msubsup"><span style="display: inline-block; position: relative; width: 0.506em; height: 0px;"><span style="position: absolute; clip: rect(3.359em, 1000.33em, 4.174em, -1000em); top: -4.004em; left: 0em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-188" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.012em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.898em; left: 0.314em;"><span style="font-size: 50%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-189" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.417em, 1000.23em, 3.78em, -1000em); top: -4.236em; left: 0.135em;"><span style="font-size: 70.7%; font-family: STIXGeneral;" id="MathJax-Span-190" class="mo">¯</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1002.23em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.229em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(2.97em, 1003.02em, 4.324em, -1000em); top: -3.157em; left: 50%; margin-left: -1.564em;"><span id="MathJax-Span-191" class="mrow"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-192" class="mi">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span id="MathJax-Span-193" class="texatom"><span id="MathJax-Span-194" class="mrow"><span id="MathJax-Span-195" class="munderover"><span style="display: inline-block; position: relative; width: 0.716em; height: 0px;"><span style="position: absolute; clip: rect(3.159em, 1000.72em, 4.324em, -1000em); top: -4.004em; left: 0em;"><span id="MathJax-Span-196" class="msubsup"><span style="display: inline-block; position: relative; width: 0.716em; height: 0px;"><span style="position: absolute; clip: rect(3.159em, 1000.46em, 4.178em, -1000em); top: -4.004em; left: 0em;"><span style="font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-197" class="mi">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.017em;"></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -3.854em; left: 0.444em;"><span style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;" id="MathJax-Span-198" class="mi">i</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(3.241em, 1000.32em, 3.62em, -1000em); top: -4.276em; left: 0.191em;"><span style="font-family: STIXGeneral;" id="MathJax-Span-199" class="mo">¯</span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span></span></span></span></span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-200" class="mo">−</span><span style="font-family: STIXGeneral; padding-left: 0.25em;" id="MathJax-Span-201" class="mn">1</span></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; clip: rect(0.852em, 1006.17em, 1.245em, -1000em); top: -1.302em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 6.175em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.082em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.543em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.398em; border-left: 0px solid; width: 0px; height: 4.34em;"></span></span></nobr><span role="presentation" class="MJX_Assistive_MathML MJX_Assistive_MathML_Block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mn>1</mn><msub><mi>N</mi><mi>e</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mrow class="MJX-TeXAtom-ORD"><mover><msub><mi>k</mi><mi>i</mi></msub><mo stretchy="false">¯</mo></mover></mrow><mo>−</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mi>V</mi><mi>a</mi><mi>r</mi><mo stretchy="false">(</mo><msub><mi>k</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mover><msub><mi>k</mi><mi>i</mi></msub><mo stretchy="false">¯</mo></mover></mrow></mfrac></mrow><mrow><mi>N</mi><mrow class="MJX-TeXAtom-ORD"><mover><msub><mi>k</mi><mi>i</mi></msub><mo stretchy="false">¯</mo></mover></mrow><mo>−</mo><mn>1</mn></mrow></mfrac></math></span></span></div><script id="MathJax-Element-13" type="math/tex; mode=display">\begin{equation}
 \frac{1}{N_e} = \frac{ \bar{k_i} - 1 + \frac{Var(k_i)}{\bar{k_i}}  }
 {N \bar{k_i} -1}
-\end{equation}
+\end{equation}</script>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">Crow_Denniston</span><span class="p">(</span><span class="n">k_i</span><span class="p">):</span>
@@ -12248,7 +12404,7 @@ The COLONY Ne estimate is: 6.243
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">Crow_Denniston</span><span class="p">(</span><span class="n">K_i</span><span class="p">)</span>
@@ -12262,20 +12418,47 @@ The COLONY Ne estimate is: 6.243
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>195.58823529411768</pre>
+<pre>202.02531645569621</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><p>Crow, James F., and Carter Denniston. "Inbreeding and variance effective population numbers." <em>Evolution</em> (1988): 482-495.</p>
+<p>Jones, Owen R., and Jinliang Wang. "COLONY: a program for parentage and sibship inference from multilocus genotype data." <em>Molecular ecology resources</em> 10.3 (2010): 551-555.</p>
+<p>Wang, Jinliang. "A new method for estimating effective population sizes from a single sample of multilocus genotypes." <em>Molecular Ecology</em> 18.10 (2009): 2148-2164.</p>
+<p>Waples, Robin S., and Ryan K. Waples. "Inbreeding effective population size and parentage analysis without parents." <em>Molecular ecology resource</em> 11.s1 (2011): 162-171.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
 </div>
 </div>
 
 </div>
     </div>
   </div>
-</body>
-</html>
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: STIXSizeOneSym,sans-serif;" id="MathJax_Font_Test"></div></div></body></html>
